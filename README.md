@@ -6,15 +6,15 @@ Toulouse (mars-mai 2021). Elle est écrite en Python, ne pèse pas grand-chose e
 
 ### Table de matières
 - [Que fait _pybrique_ ?](https://github.com/hdlkdg/pybrique#que-fait-pybrique-)
-- [Les usages possibles]
-- [Où est-ce que ça boîte ?]
-- [La structure](#structure)
-- [Comment l'utiliser ?](#utiliser)
-	* [Préparation](#preparation)
-	* [Installation et lancement](#installation)
-	* [Utilisation](#utilisation)
-- [Bibliographie](#bibliographie)
-- [Contact](#contact)
+- [Les usages possibles](https://github.com/hdlkdg/pybrique#que-permet-pybrique-)
+- [Où est-ce que ça boîte ?](https://github.com/hdlkdg/pybrique#o%C3%B9-bo%C3%AEte-pybrique-problemes)
+- [La structure](https://github.com/hdlkdg/pybrique#de-quoi-est-fait-pybrique-)
+- [Comment l'utiliser ?](https://github.com/hdlkdg/pybrique#comment-utiliser-pybrique-)
+	* [Préparation](https://github.com/hdlkdg/pybrique#pr%C3%A9paration)
+	* [Installation et lancement](https://github.com/hdlkdg/pybrique#installation-et-lancement)
+	* [Utilisation](https://github.com/hdlkdg/pybrique#utilisation)
+- [Bibliographie](https://github.com/hdlkdg/pybrique#bibliographie)
+- [Contact](https://github.com/hdlkdg/pybrique#contact)
 
 ## Que fait _pybrique_ ?
 * Il utilise le langage de requête SPARQL (**S**PARQL **P**rotocol

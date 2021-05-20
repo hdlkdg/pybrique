@@ -108,7 +108,7 @@ def aboutInCat(l):
 # Pour plus tard : il n'y a pas besoin de deux extraits .mrc différents, car le champ 245$h permet d'identifier les partitions
 def partInCat(name):
     final_result = []
-    with open('partitions.mrc', 'rb') as file:
+    with open('catalogue.mrc', 'rb') as file:
         reader = MARCReader(file)
         for record in reader:
             if '[mus.]' in str(record['245']['h']):

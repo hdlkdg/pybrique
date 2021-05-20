@@ -145,7 +145,7 @@ Pour comprendre un peu plus les enjeux de la TB et de l'usage des technologies d
 - TOUSSAINT, Claire, LERESCHE, Françoise, PUYRENIER, Frédéric et al. (dir.), 2018. _Cataloguer aujourd'hui : identifier les œuvres, les expressions, les personnes selon RDA-FR_. Paris : Ed. du Cercle de la librairie. 199 p.
 
 ### Articles
-- ADBS (éd.), 2016. Web de données et création de valeurs : le champ des possibles. _I2D - Information, données & documents. 2016. Vol. 53, N° 2.
+- ADBS (éd.), 2016. Web de données et création de valeurs : le champ des possibles. _I2D - Information, données & documents_. 2016. Vol. 53, N° 2.
 - AIOUTZ, Renaud, 2018. Alignements des données : s’habituer à finir plus… sans finir. _Arabesques_. N° 89, pp. 20-21. [Consulté le 14/05/2021]. Disponible sur : <https://publications-prairial.fr/arabesques/index.php?id=248>
 - ANGJELI, Anila, 2011. La normalisation en bibliothèque à l'heure du web sémantique. _Documentaliste - Sciences de l'Information_. Vol. 48, n° 4. [Consulté le 14/05/2021]. Disponible sur : <https://hal.archives-ouvertes.fr/hal-00875829>
 - BERMES, Emmanuelle, 2016. Web de données et bibliothèques : l’évolution du modèle d’agrégation des données. _I2D - Information, données & documents_. Vol. 53, N° 2, p. 37-37.

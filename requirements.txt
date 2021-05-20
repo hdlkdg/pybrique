@@ -1,0 +1,6 @@
+Flask==2.0.0
+Flask_RESTful==0.3.8
+pymarc==4.1.0
+marshmallow==3.12.1
+dicttoxml==1.7.4
+SPARQLWrapper==1.8.5

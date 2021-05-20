@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
+<head>
+  <meta charset="utf-8" />
+  <meta name="generator" content="pandoc" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <title>README</title>
+  <style>
+    html {
+      line-height: 1.5;
+      font-family: Georgia, serif;
+      font-size: 20px;
+      color: #1a1a1a;
+      background-color: #fdfdfd;
+    }
+    body {
+      margin: 0 auto;
+      max-width: 36em;
+      padding-left: 50px;
+      padding-right: 50px;
+      padding-top: 50px;
+      padding-bottom: 50px;
+      hyphens: auto;
+      word-wrap: break-word;
+      text-rendering: optimizeLegibility;
+      font-kerning: normal;
+    }
+    @media (max-width: 600px) {
+      body {
+        font-size: 0.9em;
+        padding: 1em;
+      }
+    }
+    @media print {
+      body {
+        background-color: transparent;
+        color: black;
+        font-size: 12pt;
+      }
+      p, h2, h3 {
+        orphans: 3;
+        widows: 3;
+      }
+      h2, h3, h4 {
+        page-break-after: avoid;
+      }
+    }
+    p {
+      margin: 1em 0;
+    }
+    a {
+      color: #1a1a1a;
+    }
+    a:visited {
+      color: #1a1a1a;
+    }
+    img {
+      max-width: 100%;
+    }
+    h1, h2, h3, h4, h5, h6 {
+      margin-top: 1.4em;
+    }
+    h5, h6 {
+      font-size: 1em;
+      font-style: italic;
+    }
+    h6 {
+      font-weight: normal;
+    }
+    ol, ul {
+      padding-left: 1.7em;
+      margin-top: 1em;
+    }
+    li > ol, li > ul {
+      margin-top: 0;
+    }
+    blockquote {
+      margin: 1em 0 1em 1.7em;
+      padding-left: 1em;
+      border-left: 2px solid #e6e6e6;
+      color: #606060;
+    }
+    code {
+      font-family: Menlo, Monaco, 'Lucida Console', Consolas, monospace;
+      font-size: 85%;
+      margin: 0;
+    }
+    pre {
+      margin: 1em 0;
+      overflow: auto;
+    }
+    pre code {
+      padding: 0;
+      overflow: visible;
+    }
+    .sourceCode {
+     background-color: transparent;
+     overflow: visible;
+    }
+    hr {
+      background-color: #1a1a1a;
+      border: none;
+      height: 1px;
+      margin: 1em 0;
+    }
+    table {
+      margin: 1em 0;
+      border-collapse: collapse;
+      width: 100%;
+      overflow-x: auto;
+      display: block;
+      font-variant-numeric: lining-nums tabular-nums;
+    }
+    table caption {
+      margin-bottom: 0.75em;
+    }
+    tbody {
+      margin-top: 0.5em;
+      border-top: 1px solid #1a1a1a;
+      border-bottom: 1px solid #1a1a1a;
+    }
+    th {
+      border-top: 1px solid #1a1a1a;
+      padding: 0.25em 0.5em 0.25em 0.5em;
+    }
+    td {
+      padding: 0.125em 0.5em 0.25em 0.5em;
+    }
+    header {
+      margin-bottom: 4em;
+      text-align: center;
+    }
+    #TOC li {
+      list-style: none;
+    }
+    #TOC a:not(:hover) {
+      text-decoration: none;
+    }
+    code{white-space: pre-wrap;}
+    span.smallcaps{font-variant: small-caps;}
+    span.underline{text-decoration: underline;}
+    div.column{display: inline-block; vertical-align: top; width: 50%;}
+    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+    ul.task-list{list-style: none;}
+    .display.math{display: block; text-align: center; margin: 0.5rem auto;}
+  </style>
+  <!--[if lt IE 9]>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv-printshiv.min.js"></script>
+  <![endif]-->
+</head>
+<body>
+<h1 id="pybrique">pybrique</h1>
+<p><em>pybrique</em> (<strong>py</strong> pour Python et <strong>brique</strong> pour brique, sans raison, c’est comme ça) est un nom que j’ai donné à l’application créée dans le cadre de mon stage au Pôle Musique de la Médiathèque José Cabanis de Toulouse (mars-mai 2021). Elle est écrite en Python, ne pèse pas grand-chose et est publiée sous <a href="https://www.gnu.org/licenses/lgpl-3.0.html">LGPLv3.0</a>.</p>
+<h3 id="table-de-matières">Table de matières</h3>
+<ul>
+<li><a href="#fonctions">Que fait <em>pybrique</em> ?</a></li>
+<li><a href="#usages">Les usages possibles</a></li>
+<li><a href="#problemes">Où est-ce que ça boîte ?</a></li>
+<li><a href="#structure">La structure</a></li>
+<li><a href="#utiliser">Comment l’utiliser ?</a>
+<ul>
+<li><a href="#preparation">Préparation</a></li>
+<li><a href="#installation">Installation et lancement</a></li>
+<li><a href="#utilisation">Utilisation</a></li>
+</ul></li>
+<li><a href="#bibliographie">Bibliographie</a></li>
+<li><a href="#contact">Contact</a></li>
+</ul>
+<h2 id="fonctions">Que fait <em>pybrique</em> ?</h2>
+<ul>
+<li>Il utilise le langage de requête SPARQL (<strong>S</strong>PARQL <strong>P</strong>rotocol <strong>a</strong>nd <strong>R</strong>DF <strong>Q</strong>uery <strong>L</strong>anguage) pour accéder aux données ouvertes de la <a href="https://data.bnf.fr">Bibliothèque nationale de France</a> et de la <a href="http://fr.dbpedia.org">DBpédia</a>.</li>
+<li>Il en extrait des données intéressantes sur un auteur : image, biographie, œuvres, ouvrages dont il ou elle fait objet, etc.</li>
+<li>Il aligne ces informations entre le catalogue local et les informations trouvées sur le Web : les résultats des requêtes SPARQL mais aussi les liens sur <a href="https://gallica.bnf.fr">Gallica</a>, sur <a href="https://imslp.org/wiki/Main_Page">IMSLP</a> et, qui sait, possiblement autre chose aussi.</li>
+<li>Il permet d’exécuter des requêtes choisies sur le programme via son API et assembler les informations récueillies comme on veut.</li>
+</ul>
+<h2 id="usages">Que permet <em>pybrique</em> ?</h2>
+<ul>
+<li>Enrichissement automatisé des contenus produits par des vrais humains (ex. bibliothécaires)</li>
+<li>Médiation centré sur le <em>contenu</em> par opposition au <em>support</em>.</li>
+<li>Utilisation de quelques avancées de la <a href="https://www.transition-bibliographique.fr/">transition bibliographique</a> (TB) sans s’y lancer entièrement.</li>
+</ul>
+<h2 id="problemes">Où boîte <em>pybrique</em> ?</h2>
+<p><em>pybrique</em> est avant tout une application de <em>recherche</em> pour ouvrir des pistes pour l’exploitation des données du Web sémantique dans un cadre documentaire comme celui des bibliothèques. Ça veut dire que les questions de sa déployabilité ont été sécondaires dans sa création. Cela pose quelques limites :</p>
+<ul>
+<li>Les requêtes SPARQL se font sur les endpoints distants, ce qui ralentit considérablement le chargement. Les données de la BnF peuvent être récupérées <a href="https://api.bnf.fr/dumps-de-databnffr">ici</a> pour être interrogées localement avec une plus grande vitesse. Cela impliquerait quelques modifications mineures du code, notamment du fichier <code>requetes.py</code>.</li>
+<li>L’identification des auteurs se fait via l’identifiant pérenne <a href="https://www.transition-bibliographique.fr/17-10-10-numero-frbnf-identifiant-ark/">ARK</a> qu’il faut aller chercher manuellement sur <a href="https://data.bnf.fr"><em>data.bnf.fr</em></a>. L’alignement entre les œuvres trouvées sur la base de données de la BnF et le catalogue local se fait à travers plusieurs éléments plus ou moins sûrs : le titre, l’auteur, la date, etc. Lorsque les identifiants ARK seront intégrés aux notices du catalogue local dans le cadre de la TB, les contenus entre différentes bases de données seront récupérables beaucoup plus facilement, sans travail supplémentaire d’alignement. Pour l’instant, <em>pybrique</em> le fait à sa manière, donc avec une certaine marge d’erreur.</li>
+</ul>
+<h2 id="structure">De quoi est fait <em>pybrique</em> ?</h2>
+<p><em>pybrique</em> est fait de deux « composantes ».</p>
+<ol type="1">
+<li><p>Le fichier <code>requetes.py</code> contient une classe de requêtes <code>Artiste</code>. Après l’importation de la classe, il suffit de l’initier en attribuant l’identifiant ARK :</p>
+<pre><code> mahler = Artiste(&#39;ark:/12148/cb13896959d&#39;)</code></pre>
+<p>Les méthodes de la classe ne sont rien d’autre que des requêtes SPARQL sur les bases de données de type RDF. Par exemple, la méthode suivante envoie une requête SPARQL pour obtenir la biographie de Mahler depuis DBpedia :</p>
+<pre><code> mahler.bio()</code></pre>
+<p>De manière générale, <code>requetes.py</code> contient un code assez propre et bien commenté, donc facile à prendre en main à condition de connaître les rudiments de Python.</p></li>
+<li><p>L’API (interface de programmation) qui permet à une plateforme de votre choix de communiquer avec le programme principal en lui envoyant des requêtes.</p></li>
+</ol>
+<h2 id="utiliser">Comment utiliser <em>pybrique</em> ?</h2>
+<h3 id="preparation">Préparation</h3>
+<p>Pour que <em>pybique</em> fonctionne correctement, il faut qu’il puisse acceder aux fichiers suivants :</p>
+<ul>
+<li><code>bibliozik.csv</code> est un catalogue des chroniques à 4 colonnes (<em>Titre</em>, <em>URL</em>, <em>ARK</em> et <em>Date</em>) qui doit être placé dans le dossier principal de l’application ;</li>
+<li><code>catalogue.mrc</code> est un extrait du catalogue en format <em>Marc21</em> qui doit lui aussi être placé dans le dossier principal de l’application.</li>
+</ul>
+<h3 id="installation">Installation et lancement</h3>
+<p>La meilleure manière d’installer les dépendances de <em>pybrique</em> est en passant par le gestionnaire de paquets Python <a href="https://pypi.org/project/pip/">pip</a>. Pour ce faire, il faut suivre les étapes suivantes :</p>
+<ul>
+<li><p>Installer <a href="https://www.python.org/downloads/">Python3</a> s’il n’est pas encore installé</p></li>
+<li><p>Installer <a href="https://pypi.org/project/pip/">pip</a></p></li>
+<li><p>Ouvrir l’interface en ligne de commande dans le dossier <em>pybrique</em> et exécuter la commande suivante :</p>
+<pre><code>  $ pip install -r requirements.txt</code></pre></li>
+</ul>
+<p>Cela va installer les dépendances suivantes :</p>
+<ul>
+<li>Flask==2.0.0</li>
+<li>Flask_RESTful==0.3.8</li>
+<li>pymarc==4.1.0</li>
+<li>marshmallow==3.12.1</li>
+<li>dicttoxml==1.7.4</li>
+<li>SPARQLWrapper==1.8.5</li>
+</ul>
+<p>Une fois les dépendaces installées, lancer l’application en exécutant</p>
+<pre><code>    $ python app.py</code></pre>
+<h3 id="utilisation">Utilisation</h3>
+<p>Une fois l’application démarrée, les requêtes sur l’API se construisent de manière suivante :</p>
+<pre><code>    http://&lt;URL&gt;/artist?ark=&lt;identifiant ark&gt;&amp;info=&lt;type d&#39;info&gt;</code></pre>
+<p>Par exemple, si l’application est lancée sur <code>http://127.0.0.1:5000/</code> et l’on veut récupérer la biographie de Gustav Mahler dont on connaît l’identifiant ARK (<code>ark:/12148/cb13896959d</code>), la requête sera la suivante :</p>
+<pre><code>    http://127.0.0.1:5000/artist?ark=ark:/12148/cb13896959d&amp;info=bio</code></pre>
+<p>qui donnera la réponse sérialisée en XML :</p>
+<pre><code>    &lt;root&gt;
+    &lt;response type=&quot;str&quot;&gt;
+    Gustav Mahler (prononcé [ˈɡʊstaf ˈmaːlɐ] en allemand), né à Kaliště dans l&#39;Empire d&#39;Autriche (aujourd&#39;hui en République tchèque), le 7 juillet 1860 et mort à Vienne le 18 mai 1911, est un compositeur, pianiste et chef d&#39;orchestre autrichien. Plus célèbre en son temps comme chef d&#39;orchestre, son nom reste attaché aujourd’hui à son œuvre de compositeur dont la dimension orchestrale et l&#39;originalité musicale jettent un pont entre la fin du XIXe siècle et la période moderne. Il est l&#39;auteur de dix symphonies (la réduction d’orchestre (en) de la dernière est complète, mais son orchestration est inachevée) et plusieurs cycles de lieder.
+    &lt;/response&gt;
+    &lt;/root&gt;</code></pre>
+<p>Les méthodes correspondant aux types d’information a récupérer sont les suivantes :</p>
+<ul>
+<li><code>name</code> - le nom de l’artiste</li>
+<li><code>bio</code> - la biographie de l’artiste</li>
+<li><code>img</code> - une image de l’artite (URL)</li>
+<li><code>caption</code> - la légende associée à l’image</li>
+<li><code>partitions</code> - la liste des partitions de l’auteur sur le catalogue de la médiathèque</li>
+<li><code>imslp</code> - le lien vers les partitions de l’auteur sur <a href="https://imslp.org/wiki/Main_Page">IMSLP</a></li>
+<li><code>works</code> - la liste de <em>toutes</em> les œuvres de l’auteur connues de la BnF</li>
+<li><code>worksincat</code> - la liste des œuvres de l’auteur sur le catalogue de la médiathèque</li>
+<li><code>gallica</code> - la liste des réproductions numériques des œuvres de l’auteur sur <a href="https://gallica.bnf.fr">Gallica</a></li>
+<li><code>about</code> - la liste de <em>toutes</em> les œuvres traitant de l’auteur connues de la BnF</li>
+<li><code>aboutincat</code> - la liste des œuvres traitant de l’auteur sur le catalogue de la médiathèque</li>
+<li><code>bibliozik</code> - les chroniques <a href="https://www.bibliotheque.toulouse.fr/sites-thematiques/bibliozik/chronique-musique/">Bibliozik</a> traitant de l’auteur</li>
+<li><code>wikipedia</code> - le lien Wikipédia de l’auteur</li>
+<li><code>musicbrainz</code> - le lien MusicBrainz de l’auteur</li>
+<li><code>site</code> - le site de l’auteur</li>
+</ul>
+<p>Si l’on préfère les réponses sérialisées en JSON plutôt que XML, cela devrait se faire facilement en modifiant <code>app.py</code></p>
+<h2 id="bibliographie">Bibliographie</h2>
+<p>Pour comprendre un peu plus les enjeux de la TB et de l’usage des technologies du web sémantique dans un contexte documentaire, la bibliographie ci-dessous propose quelques pistes de lecture et d’exploration autour du sujet.</p>
+<h3 id="ouvrages">Ouvrages</h3>
+<ul>
+<li>BERMES, Emmanuelle, ISAAC, Antoine et POUPEAU, Gautier, 2013. <em>Le web sémantique en bibliothèque</em>. Paris : Ed. du Cercle de la librairie, 2013. 176 p.</li>
+<li>BERMES, Emmanuelle (dir.), 2016. <em>Vers de nouveaux catalogues</em>. Paris : Ed. du Cercle de la librairie. 171 p. </li>
+<li>DELESTRE, Nicolas et MALANDAIN, Nicolas, 2017. <em>Du web des documents au web sémantique</em>. Bois-Guillaume : Klog. 199 p.</li>
+<li>MESGUICH Véronique, 2017. 4. Rendre les catalogues de bibliothèques plus visibles sur le Web. In : MESGUICH, Véronique (dir.). <em>Bibliothèques : le Web est à vous</em>. Paris, Éd. du Cercle de la Librairie, p. 77-103.</li>
+<li>TOUSSAINT, Claire, LERESCHE, Françoise, PUYRENIER, Frédéric et al. (dir.), 2018. <em>Cataloguer aujourd’hui : identifier les œuvres, les expressions, les personnes selon RDA-FR</em>. Paris : Ed. du Cercle de la librairie. 199 p.</li>
+</ul>
+<h3 id="articles">Articles</h3>
+<ul>
+<li>ADBS (éd.), 2016. Web de données et création de valeurs : le champ des possibles. _I2D - Information, données &amp; documents. 2016. Vol. 53, N° 2.</li>
+<li>AIOUTZ, Renaud, 2018. Alignements des données : s’habituer à finir plus… sans finir. <em>Arabesques</em>. N° 89, pp. 20-21. [Consulté le 14/05/2021]. Disponible sur : <a href="https://publications-prairial.fr/arabesques/index.php?id=248" class="uri">https://publications-prairial.fr/arabesques/index.php?id=248</a></li>
+<li>ANGJELI, Anila, 2011. La normalisation en bibliothèque à l’heure du web sémantique. <em>Documentaliste - Sciences de l’Information</em>. Vol. 48, n° 4. [Consulté le 14/05/2021]. Disponible sur : <a href="https://hal.archives-ouvertes.fr/hal-00875829" class="uri">https://hal.archives-ouvertes.fr/hal-00875829</a></li>
+<li>BERMES, Emmanuelle, 2016. Web de données et bibliothèques : l’évolution du modèle d’agrégation des données. <em>I2D - Information, données &amp; documents</em>. Vol. 53, N° 2, p. 37-37.</li>
+<li>BOURNERIE, Pierre, 2020. Le petit laboratoire sémantique : expérimentation à la BM de Fresnes. <em>Site de la Transition Bibliographique</em> [en ligne]. Mis à jour le 12/05/2020. [Consulté le 14/05/2021]. Disponible sur : <a href="https://www.transition-bibliographique.fr/2018-04-09-petit-laboratoire-semantique-experimentation-bm-fresnes/" class="uri">https://www.transition-bibliographique.fr/2018-04-09-petit-laboratoire-semantique-experimentation-bm-fresnes/</a></li>
+<li>CAVALIE, Etienne et GEOFFROY, Géraldine, 2015. Transformer les collections en information grâce aux technologies du web sémantique. <em>Arabesques</em>. N° 80, pp. 19-20. [Consulté le 14/05/2021]. Disponible sur : <a href="https://hal.archives-ouvertes.fr/hal-01179423" class="uri">https://hal.archives-ouvertes.fr/hal-01179423</a></li>
+<li>JACQUOT, Olivier, 2017. <em>data.bnf.fr</em> pour les nuls. <em>Carnet de recherche à la Bibliothèque nationale de France</em> [en ligne]. Mis en ligne le 21/11/2017. [Consulté le 14/05/2021]. Disponible sur : <a href="https://bnf.hypotheses.org/2181" class="uri">https://bnf.hypotheses.org/2181</a></li>
+<li>KEMBELLEC, Gérald, 2016. Le web de données en contexte bibliothécaire. <em>I2D - Information, données &amp; documents</em>. Vol. 53, N° 2, p. 30-31.</li>
+<li>MENON, Bruno, 2016. Comprendre les standards du web de données. <em>I2D - Information, données &amp; documents</em>. Vol. 53, N° 2, p. 32-34.</li>
+</ul>
+<h3 id="conférences">Conférences</h3>
+<ul>
+<li>AZOUZ, Kaouther, 2014. Le web sémantique, média de valorisation des pratiques professionnelles en bibliothèques. In : <em>9ème Journée Jeunes Chercheurs du laboratoire GERiiCO de Université Lille 3</em>. Villeneuve d’Ascq, France, 2014. [Consulté le 14/05/2021]. Disponible sur : <a href="https://hal.archives-ouvertes.fr/hal-01637615" class="uri">https://hal.archives-ouvertes.fr/hal-01637615</a></li>
+<li>BERMES, Emmanuelle, BOULET, Vincent et LECLAIRE, Céline, 2016. Améliorer l’accès aux données des bibliothèques sur le web : l’exemple de data.bnf.fr. In : National Libraries, International Federation of Library Associations and Institutions (IFLA). <em>IFLA WLIC 2016 – Columbus, OH – Connections. Collaboration. Community in Session 201.</em> Columbus, États-Unis, 2016. [Consulté le 14/05/2021]. Disponible sur : <a href="https://hal.archives-ouvertes.fr/hal-01393255" class="uri">https://hal.archives-ouvertes.fr/hal-01393255</a></li>
+</ul>
+<h3 id="ressources-en-ligne">Ressources en ligne</h3>
+<ul>
+<li>Bibliothèque municipale de Fresnes, 2020. Pétit laboratoire sémantique. <em>Site de de la Transition Bibliographique</em> [en ligne]. [Consulté le 14/05/2021]. Disponible sur : <a href="http://bm.fresnes94.fr/semlab/" class="uri">http://bm.fresnes94.fr/semlab/</a></li>
+<li>Bibliothèque nationale de France, 2021. Web sémantique et modèle de données. <em>data.bnf.fr</em> [en ligne]. Mis à jour le 14/01/2021. [Consulté le 14/05/2021]. Disponible sur : <a href="https://data.bnf.fr/fr/semanticweb" class="uri">https://data.bnf.fr/fr/semanticweb</a></li>
+<li>Bibliothèque nationale de France, 2020. SPARQL endpoint de data.bnf.fr. <em>data.bnf.fr</em> [en ligne]. [Consulté le 14/05/2021]. Disponible sur : <a href="https://api.bnf.fr/fr/sparql-endpoint-de-databnffr" class="uri">https://api.bnf.fr/fr/sparql-endpoint-de-databnffr</a></li>
+<li>World Wide Web Consortium, 2013. SPARQL 1.1 Query Language. <em>W3C</em> [en ligne]. Mis à jour le 21/03/2013. [Consulté le 14/05/2021]. Disponible sur : <a href="https://www.w3.org/TR/sparql11-protocol/" class="uri">https://www.w3.org/TR/sparql11-protocol/</a></li>
+</ul>
+<h2 id="contact">Contact</h2>
+<p>Voilà tout. Si vous voulez me contacter, vous pouvez vous adresser à <em>lukk.plt</em> [bzgt] <em>gmail.com</em> et je vous répondrai si je peux.</p>
+</body>
+</html>

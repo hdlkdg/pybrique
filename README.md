@@ -5,9 +5,9 @@ cadre de mon stage au Pôle Musique de la Médiathèque José Cabanis de
 Toulouse (mars-mai 2021). Elle est écrite en Python, ne pèse pas grand-chose et est publiée sous [GPLv3.0](https://www.gnu.org/licenses/gpl-3.0.fr.html).
 
 ### Table de matières
-- [Que fait _pybrique_ ?](#Que fait _pybrique_ ?)
-- [Les usages possibles](#usages)
-- [Où est-ce que ça boîte ?](#problemes)
+- [Que fait _pybrique_ ?](https://github.com/hdlkdg/pybrique#que-fait-pybrique-)
+- [Les usages possibles]
+- [Où est-ce que ça boîte ?]
 - [La structure](#structure)
 - [Comment l'utiliser ?](#utiliser)
 	* [Préparation](#preparation)
@@ -25,7 +25,6 @@ nationale de France](https://data.bnf.fr) et de la [DBpédia](http://fr.dbpedia.
 * Il aligne ces informations entre le catalogue local et les informations trouvées sur le Web : les résultats des requêtes SPARQL mais aussi les liens sur [Gallica](https://gallica.bnf.fr), sur [IMSLP](https://imslp.org/wiki/Main_Page) et, qui sait, possiblement autre chose aussi.
 * Il permet d'exécuter des requêtes choisies sur le programme via son API et assembler les informations récueillies comme on veut.
 
-<a name="usages"/>
 ## Que permet _pybrique_ ?
 * Enrichissement automatisé des contenus produits par des vrais humains (ex.
   bibliothécaires)
@@ -34,7 +33,6 @@ nationale de France](https://data.bnf.fr) et de la [DBpédia](http://fr.dbpedia.
   bibliographique](https://www.transition-bibliographique.fr/) (TB) sans s'y lancer
   entièrement. 
 
-<a name="problemes"/>
 ## Où boîte _pybrique_ ?{#problemes}
 _pybrique_ est avant tout une application de _recherche_ pour ouvrir des pistes pour
 l'exploitation des données du Web sémantique dans un cadre documentaire comme
@@ -50,7 +48,6 @@ limites :
   pérenne
   [ARK](https://www.transition-bibliographique.fr/17-10-10-numero-frbnf-identifiant-ark/) qu'il faut aller chercher manuellement sur [_data.bnf.fr_](https://data.bnf.fr). L'alignement entre les œuvres trouvées sur la base de données de la BnF et le catalogue local se fait à travers plusieurs éléments plus ou moins sûrs : le titre, l'auteur, la date, etc. Lorsque les identifiants ARK seront intégrés aux notices du catalogue local dans le cadre de la TB, les contenus entre différentes bases de données seront récupérables beaucoup plus facilement, sans travail supplémentaire d'alignement. Pour l'instant, _pybrique_ le fait à sa manière, donc avec une certaine marge d'erreur.
 
-<a name="structure"/>
 ## De quoi est fait _pybrique_ ?
 _pybrique_ est fait de deux « composantes ».
 
@@ -66,10 +63,8 @@ _pybrique_ est fait de deux « composantes ».
 
 2. L'API (interface de programmation) qui permet à une plateforme de votre choix de communiquer avec le programme principal en lui envoyant des requêtes.
 
-<a name="utiliser"/>
 ## Comment utiliser _pybrique_ ?
 
-<a name="preparation"/>
 ### Préparation
 
 Pour que _pybique_ fonctionne correctement, il faut qu'il puisse acceder aux fichiers suivants :
@@ -77,7 +72,6 @@ Pour que _pybique_ fonctionne correctement, il faut qu'il puisse acceder aux fic
 - `bibliozik.csv` est un catalogue des chroniques à 4 colonnes (_Titre_, _URL_, _ARK_ et _Date_) qui doit être placé dans le dossier principal de l'application ;
 - `catalogue.mrc` est un extrait du catalogue en format _Marc21_ qui doit lui aussi être placé dans le dossier principal de l'application.
 
-<a name="installation"/>
 ### Installation et lancement
 
 La meilleure manière d'installer les dépendances de _pybrique_ est en passant par le gestionnaire de paquets Python [pip](https://pypi.org/project/pip/). Pour ce faire, il faut suivre les étapes suivantes :
@@ -101,7 +95,6 @@ Une fois les dépendaces installées, lancer l'application en exécutant
 
 		$ python app.py
 
-<a name="utilisation"/>
 ### Utilisation
 
 Une fois l'application démarrée, les requêtes sur l'API se construisent de manière suivante :
@@ -140,7 +133,6 @@ Les méthodes correspondant aux types d'information a récupérer sont les suiva
 
 Si l'on préfère les réponses sérialisées en JSON plutôt que XML, cela devrait se faire facilement en modifiant `app.py`
 
-<a name="bibliographie"/>
 ## Bibliographie
 
 Pour comprendre un peu plus les enjeux de la TB et de l'usage des technologies du web sémantique dans un contexte documentaire, la bibliographie ci-dessous propose quelques pistes de lecture et d'exploration autour du sujet.
@@ -173,7 +165,6 @@ Pour comprendre un peu plus les enjeux de la TB et de l'usage des technologies d
 - Bibliothèque nationale de France, 2020. SPARQL endpoint de data.bnf.fr. _data.bnf.fr_ [en ligne]. [Consulté le 14/05/2021]. Disponible sur : <https://api.bnf.fr/fr/sparql-endpoint-de-databnffr>
 - World Wide Web Consortium, 2013. SPARQL 1.1 Query Language. _W3C_ [en ligne]. Mis à jour le 21/03/2013. [Consulté le 14/05/2021]. Disponible sur : <https://www.w3.org/TR/sparql11-protocol/>
 
-<a name="contact"/>
 ## Contact
 
 Voilà tout. Si vous voulez me contacter, vous pouvez vous adresser à _lukk.plt_ [bzgt] _gmail.com_ et je vous répondrai si je peux.

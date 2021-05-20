@@ -5,7 +5,7 @@ cadre de mon stage au Pôle Musique de la Médiathèque José Cabanis de
 Toulouse (mars-mai 2021). Elle est écrite en Python, ne pèse pas grand-chose et est publiée sous [GPLv3.0](https://www.gnu.org/licenses/gpl-3.0.fr.html).
 
 ### Table de matières
-- [Que fait _pybrique_ ?](#fonctions)
+- [Que fait _pybrique_ ?](#Que fait _pybrique_ ?)
 - [Les usages possibles](#usages)
 - [Où est-ce que ça boîte ?](#problemes)
 - [La structure](#structure)
@@ -16,7 +16,6 @@ Toulouse (mars-mai 2021). Elle est écrite en Python, ne pèse pas grand-chose e
 - [Bibliographie](#bibliographie)
 - [Contact](#contact)
 
-<a name="fonctions"/>
 ## Que fait _pybrique_ ?
 * Il utilise le langage de requête SPARQL (**S**PARQL **P**rotocol
   **a**nd **R**DF **Q**uery **L**anguage) pour accéder aux données ouvertes de la [Bibliothèque

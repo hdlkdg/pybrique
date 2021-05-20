@@ -17,13 +17,13 @@ Toulouse (mars-mai 2021). Elle est écrite en Python, ne pèse pas grand-chose e
 - [Contact](#contact)
 
 ## Que fait _pybrique_ ?{#fonctions}
-* Il utilise le langage de requête SPARQL (**S**PARQL **P**rotocol
+* Elle utilise le langage de requête SPARQL (**S**PARQL **P**rotocol
   **a**nd **R**DF **Q**uery **L**anguage) pour accéder aux données ouvertes de la [Bibliothèque
 nationale de France](https://data.bnf.fr) et de la [DBpédia](http://fr.dbpedia.org).
-* Il en extrait des données intéressantes sur un auteur : image,
+* Elle en extrait des données intéressantes sur un auteur : image,
   biographie, œuvres, ouvrages dont il ou elle fait objet, etc.
-* Il aligne ces informations entre le catalogue local et les informations trouvées sur le Web : les résultats des requêtes SPARQL mais aussi les liens sur [Gallica](https://gallica.bnf.fr), sur [IMSLP](https://imslp.org/wiki/Main_Page) et, qui sait, possiblement autre chose aussi.
-* Il permet d'exécuter des requêtes choisies sur le programme via son API et assembler les informations récueillies comme on veut.
+* Elle aligne ces informations entre le catalogue local et les informations trouvées sur le Web : les résultats des requêtes SPARQL mais aussi les liens sur [Gallica](https://gallica.bnf.fr), sur [IMSLP](https://imslp.org/wiki/Main_Page) et, qui sait, possiblement autre chose aussi.
+* Elle permet d'exécuter des requêtes choisies sur le programme via son API et assembler les informations récueillies comme on veut.
 
 ## Que permet _pybrique_ ?{#usages}
 * Enrichissement automatisé des contenus produits par des vrais humains (ex.
@@ -67,7 +67,7 @@ _pybrique_ est fait de deux « composantes ».
 
 ### Préparation{#preparation}
 
-Pour que _pybique_ fonctionne correctement, il faut qu'il puisse acceder aux fichiers suivants :
+Pour que _pybique_ fonctionne correctement, il faut qu'elle puisse acceder aux fichiers suivants :
 
 - `bibliozik.csv` est un catalogue des chroniques à 4 colonnes (_Titre_, _URL_, _ARK_ et _Date_) qui doit être placé dans le dossier principal de l'application ;
 - `catalogue.mrc` est un extrait du catalogue en format _Marc21_ qui doit lui aussi être placé dans le dossier principal de l'application.
